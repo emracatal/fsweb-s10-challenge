@@ -4,7 +4,18 @@ import PostForm from "./components/PostForm";
 import PostList from "./components/PostList";
 import Img from "./assets/gratitude.jpg";
 
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+
 export default function App() {
+  const { id, date, body } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    //function here
+  }, []);
+
+
   return (
     <div>
       <div className="bg-white shadow mb-8">
@@ -17,6 +28,7 @@ export default function App() {
           >
             Anasayfa
           </NavLink>
+
           <NavLink
             to="/notlar"
             className="p-4 pb-3 tracking-tighter"
@@ -24,6 +36,7 @@ export default function App() {
           >
             Tüm Notlar
           </NavLink>
+
           <NavLink
             to="/yeni-not"
             className="p-4 pb-3 tracking-tighter"
@@ -33,6 +46,7 @@ export default function App() {
           </NavLink>
         </nav>
       </div>
+
       <Switch>
         <Route exact path="/">
           <div className="max-w-xl mx-auto px-4 pb-8">
@@ -65,6 +79,7 @@ export default function App() {
             <PostList />
           </div>
         </Route>
+
       </Switch>
     </div>
   );

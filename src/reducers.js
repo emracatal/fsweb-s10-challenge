@@ -24,6 +24,19 @@ function baslangicNotlariniGetir(key) {
   if (eskiNotlar) {
     return localStorageStateOku(key);
   } else {
-    return baslangicDegerleri
+    return baslangicDegerleri;
   }
 }
+
+// const myReducer = (state, action) => {
+//   switch (action.type) {
+//     case "INCREASE":
+//       return state + 1;
+//     case "DECREASE":
+//       return state - 1;
+//     case "PLUS":
+//       return state + action.payload;
+//     default:
+//       return state;
+//   }
+// };
