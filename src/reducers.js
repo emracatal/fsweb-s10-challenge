@@ -30,12 +30,10 @@ function baslangicNotlariniGetir(key) {
 
 export function reducer(state = baslangicDegerleri, action) {
   switch (action.type) {
-    case "INCREASE":
-      return state + 1;
-    case "DECREASE":
-      return state - 1;
-    case "PLUS":
-      return state + action.payload;
+    case "NOT_EKLE":
+      console.log("not eklendi");
+    case "NOT_SIL":
+      console.log("not silindi");
     default:
       return state;
   }
