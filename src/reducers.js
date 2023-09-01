@@ -28,15 +28,15 @@ function baslangicNotlariniGetir(key) {
   }
 }
 
-// const myReducer = (state, action) => {
-//   switch (action.type) {
-//     case "INCREASE":
-//       return state + 1;
-//     case "DECREASE":
-//       return state - 1;
-//     case "PLUS":
-//       return state + action.payload;
-//     default:
-//       return state;
-//   }
-// };
+export function reducer(state = baslangicDegerleri, action) {
+  switch (action.type) {
+    case "INCREASE":
+      return state + 1;
+    case "DECREASE":
+      return state - 1;
+    case "PLUS":
+      return state + action.payload;
+    default:
+      return state;
+  }
+}
