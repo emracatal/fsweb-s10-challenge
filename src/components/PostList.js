@@ -9,8 +9,8 @@ const PostList = () => {
     <div className="beyazKutu text-center p-6">Hiç notunuz yok</div>
   ) : (
     <div>
-      {notlar.map((not) => (
-        <Post item={not} key={not.id} />
+      {notlar.map((not, key) => (
+        <Post item={not} key={key} />
       ))}
     </div>
   );

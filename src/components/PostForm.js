@@ -13,8 +13,8 @@ export default function PostForm() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const history = useHistory();
   const dispatch = useDispatch();
+  const history = useHistory();
   function onSubmit(data) {
     const yeniNot = {
       id: nanoid(),
@@ -29,7 +29,7 @@ export default function PostForm() {
     dispatch(notEkle(yeniNot));
     // toast mesajı gösterin
     // sonra aşağıdaki satırı aktifleştirin
-    // setTimeout(() => history.push("/notlar"), 2000);
+    setTimeout(() => history.push("/notlar"), 2000);
   }
 
   const inputCx = "border border-zinc-300 h-9 rounded-none text-sm px-2 w-full";

@@ -33,7 +33,10 @@ export function reducer(state = baslangicDegerleri, action) {
     case "NOT_EKLE":
       return { ...state, notlar: [...state.notlar, action.payload] };
     case "NOT_SIL":
-      return { ...state, notlar: [...state.notlar, action.payload] };
+      return {
+        ...state,
+        notlar: state.notlar.filter((not) => not.id !== action.payload),
+      };
     default:
       return state;
   }
