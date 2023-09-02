@@ -7,8 +7,6 @@ import Img from "./assets/gratitude.jpg";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
-import { notEkle } from "./actions";
-
 export default function App() {
   const { id, date, body } = useSelector((state) => state);
   const dispatch = useDispatch();

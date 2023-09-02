@@ -31,9 +31,9 @@ function baslangicNotlariniGetir(key) {
 export function reducer(state = baslangicDegerleri, action) {
   switch (action.type) {
     case "NOT_EKLE":
-      console.log("not eklendi");
+      return { ...state, notlar: [...state.notlar, action.payload] };
     case "NOT_SIL":
-      console.log("not silindi");
+      return { ...state, notlar: [...state.notlar, action.payload] };
     default:
       return state;
   }

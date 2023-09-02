@@ -4,9 +4,7 @@ import { nanoid } from "nanoid";
 import { useHistory } from "react-router";
 import Gratitude from "./../assets/grForm.png";
 import { notEkle } from "../actions";
-import { dispatch } from "react";
-
-const dispatch = useDispatch();
+import { useDispatch } from "react-redux";
 
 export default function PostForm() {
   const {
@@ -16,7 +14,7 @@ export default function PostForm() {
   } = useForm({ mode: "onChange" });
 
   const history = useHistory();
-
+  const dispatch = useDispatch();
   function onSubmit(data) {
     const yeniNot = {
       id: nanoid(),
@@ -27,6 +25,8 @@ export default function PostForm() {
     };
 
     // burada ilgili eylemi dispatch edin
+
+    dispatch(notEkle(yeniNot));
     // toast mesajı gösterin
     // sonra aşağıdaki satırı aktifleştirin
     // setTimeout(() => history.push("/notlar"), 2000);
