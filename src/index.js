@@ -35,7 +35,6 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <App />
       </>
     </BrowserRouter>
