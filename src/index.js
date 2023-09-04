@@ -18,8 +18,8 @@ import logger from "redux-logger";
 import thunk from "redux-thunk";
 
 //npm install --save react-toastify
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+//import { ToastContainer } from "react-toastify";
+//import "react-toastify/dist/ReactToastify.css";
 
 //npm install axios //taşınacak
 import axios from "axios";
@@ -35,7 +35,7 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <>
-        <ToastContainer />
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <App />
       </>
     </BrowserRouter>

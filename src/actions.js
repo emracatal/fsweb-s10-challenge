@@ -16,8 +16,8 @@ export const notEkleAPI = (yeniNot) => (dispatch) => {
     .post("https://httpbin.org/anything", yeniNot)
     .then((res) => {
       if (res.status === 200) {
-        dispatch(notEkle(yeniNot));
-        console.log(res.data.json);
+        console.log(res);
+        dispatch(notEkle(res.data.json));
       }
     })
     .catch((error) => console.log(error));
@@ -29,7 +29,8 @@ export const notSilAPI = (id) => (dispatch) => {
     .delete("https://httpbin.org/anything", { data: id })
     .then((res) => {
       if (res.status === 200) {
-        dispatch(notSilAPI(id));
+        console.log(res);
+        dispatch(notSil(res.data.data));
       }
     })
     .catch((error) => console.log(error));

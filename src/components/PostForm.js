@@ -3,8 +3,9 @@ import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
 import { useHistory } from "react-router";
 import Gratitude from "./../assets/grForm.png";
-import { notEkle } from "../actions";
+import { notEkle, notEkleAPI } from "../actions";
 import { useDispatch } from "react-redux";
+import swal from "sweetalert";
 
 export default function PostForm() {
   const {
@@ -25,8 +26,11 @@ export default function PostForm() {
     };
 
     // burada ilgili eylemi dispatch edin
-    dispatch(notEkle(yeniNot));
+    dispatch(notEkleAPI(yeniNot));
+
     // toast mesajı gösterin
+    swal("ekledin!", "aferin!", "success");
+
     // sonra aşağıdaki satırı aktifleştirin
     setTimeout(() => history.push("/notlar"), 2000);
   }
