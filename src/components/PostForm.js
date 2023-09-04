@@ -25,7 +25,6 @@ export default function PostForm() {
     };
 
     // burada ilgili eylemi dispatch edin
-
     dispatch(notEkle(yeniNot));
     // toast mesajı gösterin
     // sonra aşağıdaki satırı aktifleştirin
@@ -41,6 +40,7 @@ export default function PostForm() {
       </div>
 
       <form
+        //button type submit varsa ve form taginde onsubmit fnk varsa onclick gereksiz
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-3 p-8 flex-1"
       >
@@ -79,11 +79,7 @@ export default function PostForm() {
           />
         </div>
 
-        <button
-          type="submit"
-          className="myButton"
-          onClick={() => dispatch(notEkle())}
-        >
+        <button type="submit" className="myButton">
           Ekle
         </button>
       </form>

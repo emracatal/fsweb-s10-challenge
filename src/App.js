@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 export default function App() {
-  const { id, date, body } = useSelector((state) => state);
+  //const { id, date, body } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
